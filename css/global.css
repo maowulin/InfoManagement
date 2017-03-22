@@ -1,0 +1,243 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body,html{
+	font-family:"微软雅黑";
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration:underline;
+}
+ul li{
+	list-style-type: none;
+}
+.header{
+	width: 100%;
+	min-width: 1300px;
+	overflow: hidden;
+	background-color:#0098e4;
+}
+.header h1.logo{
+	width: 200px;
+	height: 90px;
+	line-height: 90px;
+	float:left;
+	text-align: center;
+	background-color:#0098e4;
+	color:#2b617f;
+}
+.content_header{
+	height: 90px;
+	background-color:#0098e4;
+	color:white;
+	margin-left: 200px;
+}
+.content_header_left{
+	float:left;
+}
+.content_header_left h1{
+	line-height: 50px;
+}
+.content_header_right{
+	float:right;
+	line-height: 90px;
+}
+.content_header_right span{
+	float:left;
+	margin-right: 20px;
+}
+.content_header_right span a{
+	color:white;
+}
+.aside{
+	width: 201px;
+	background-color:#f3fafe;
+	overflow: auto;
+	position: absolute;
+	top:90px;
+	left:0px;
+	bottom:0px;
+	border-right:1px solid #ccc;
+}
+.aside dl{
+	width: 200;
+	
+	overflow: hidden;
+	color:#808182;
+	/*border-right:1px solid #ccc;*/
+}
+.aside dl dt{
+	width:200px;
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	overflow: hidden;
+}
+.aside dl dt.click_now{
+	background-color: #e3ecf1;
+	border-bottom:2px solid #2798e3;
+}
+.aside dl dt.click_now em{
+	background:url("../images/bk.png") no-repeat 7px 10px;
+}
+.aside dl dd{
+	width: 100%;
+	line-height: 40px;
+	text-align: center;
+	overflow: hidden;
+	font-size: 14px;
+	height: 0px;
+	transition: 300ms all;
+}
+.aside dl dd.curr{
+	height: 80px;
+}
+.aside dl  dt span{
+	display: inline-block;
+}
+
+.sample_center i,.Experiment_center i,.Presentation_center i,.system_management i{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 15px 10px 0px 0px;
+}
+.sample_center em,.Experiment_center em,.Presentation_center em,.system_management em{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 15px 0px 0px 10px;
+}
+.sample_center i{
+	background:url("../images/bk.png") no-repeat 0px -28px;
+}
+.sample_center em{
+	background:url("../images/bk.png") no-repeat 6px -5px;
+}
+.Experiment_center i{
+	background:url("../images/bk.png") no-repeat -1px -72px;
+}
+.Experiment_center em{
+	background:url("../images/bk.png") no-repeat 6px -5px;
+}
+.Presentation_center i{
+	background:url("../images/bk.png") no-repeat 0px -127px;
+}
+.Presentation_center em{
+	background:url("../images/bk.png") no-repeat 6px -5px;
+}
+.system_management i{
+	background:url("../images/bk.png") no-repeat -1px -183px;
+}
+.system_management em{
+	background:url("../images/bk.png") no-repeat 6px -5px;
+}
+.now{
+	color:#5bb2ea;
+}
+.iframe{
+	position:absolute;
+	top:90px;
+	left: 1px;
+	right:0px;
+	bottom:40px; 
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-left: 201px;
+	min-width: 1100px;
+	background-color:#f6f7fb;
+	z-index: 999;
+}
+.loading{
+	position:absolute;
+	top:90px;
+	left: 1px;
+	right:0px;
+	bottom:40px; overflow: auto;
+	margin-left: 201px;
+	min-width: 1100px;
+	background-color:#f6f7fb;
+	z-index: 222;
+	/*display: none;*/
+}
+.loading p{
+	width: 300px;
+	height: 100px;
+	margin:200px auto;
+}
+.footer{
+	min-width:1100px;
+	margin-left: 201px;
+	position: absolute;
+	left:0px;
+	bottom: 0px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-bottom:1px solid #ccc;
+	color:#ccc;
+	font-size: 12px;
+}
+/*iframe页面头部信息的样式代码*/
+.web_information{
+	width: 100%;
+	min-width:1100px;
+	height: 55px;
+	line-height: 55px;
+	background-color: #eef8fe;
+	border-bottom:1px solid #ccc;
+}
+.web_information_left{
+	float:left;
+}
+.web_information_right{
+	float:right;
+}
+.web_information_left i,.web_information_left span,.web_information_right i,.web_information_right span{
+	float:left;
+}
+.web_information_left i{
+	width: 30px;
+	height: 55px;
+	overflow: hidden;
+	margin:0px 10px;
+	background:url(../images/bk.png) no-repeat 0px -213px;
+}
+.web_information_right i{
+	width: 30px;
+	height: 55px;
+	overflow: hidden;
+	margin:0px 10px;
+	background:url(../images/bk.png) no-repeat 0px -258px;
+}
+.web_information_right span{
+	display: block;
+	width:250px;
+}
+#all_screen,#out_all_screen{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	width:35px;
+	height: 35px;
+	opacity:0.6;
+}
+#all_screen{
+	background:url("../images/all_screen.png") no-repeat top left;
+	
+}
+#out_all_screen{
+	background:url("../images/out_all_screen.png") no-repeat top left;
+	display: none;
+}
+.footer.all_screen{
+	width:100%;
+	margin-left:0px;
+	background-color:#fff;
+}

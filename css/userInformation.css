@@ -1,0 +1,148 @@
+#sampleDate_user{
+	width:178px;
+}
+#reset_search_user{
+	margin-left:20px;
+}
+.addUserInformation{
+	background-color:#fff;
+	position: absolute;
+	/*border:1px solid green;*/
+	width:100%;
+	height:100%;
+	top:56px;
+	left:0px;
+	bottom:40px;
+	display:none;
+	overflow: auto;
+}
+.content2{
+	position: absolute;
+	left:0px;
+	width:96%;
+	min-width: 910px;
+	margin-top:20px;
+	margin-left:2%;
+	margin-right:50px;
+	/*overflow: auto;*/
+	overflow-x: hidden;
+	background-color:#fff;
+}
+div.table_group{
+	width:100%;
+	margin-bottom:20px;
+	overflow: hidden;
+}
+.content2 p.userhead{
+	width:100%;
+	min-width:910px;
+	line-height: 40px;
+	background-color:#299be4;
+	color:white;
+	margin-right:50px;
+}
+.content2 p.userhead span{
+	display: inline-block;
+	margin-left:20px;
+}
+.content2 .table_group div{
+	width:100%;
+	min-width:910px;
+	height:50px;
+	line-height: 50px;
+	background-color:#e2e7eb;
+	margin-bottom:2px;
+	margin-right:50px;
+	overflow: hidden;
+}
+.content2 div label{
+	display: inline-block;
+	float:left;
+	width:30%;
+	margin-left:20px;
+	/*border:1px solid green;*/
+}
+.content2 div label span{
+	display:inline-block;
+	width:100px;
+	text-align:right;
+}
+.content2 div label input,.content2 div label select{
+	width:150px;
+	height: 30px;
+	line-height:30px;
+	margin-left:10px;
+	border:1px solid #ccc;
+	text-align: center;
+}
+.content2 label[for="adressT"]{
+	width:100%;
+}
+.content2 label[for="adressT"] input{
+	width:75%;
+}
+
+.table_group div.text{
+	padding:10px 0px;
+	display: table;
+	vertical-align: middle;
+}
+.table_group div.text label{
+	width:100%;
+	display: table-row;
+	vertical-align: middle;
+}
+
+.table_group div.text span,.table_group div.text textarea{
+	display: table-cell;
+	float:left;
+}
+.table_group div.text textarea{
+	width:70%;
+	height: 80px;
+	margin: 0px 10px;
+}
+.content2 div label input.laydate-icon{
+	width:130px;
+}
+.content2 p.button_group{
+	width:100%;
+	overflow: hidden;
+}
+.content2 p.button_group input{
+	width:100px;
+	text-align: center;
+	height: 30px;
+	line-height:30px;
+	border:none;
+	border-radius:5px;
+	box-shadow: 2px 2px 10px #ccc;
+	float:left;
+}
+.content2 p.button_group input[type="reset"]{
+	background:#fff;
+	color:#299be4;
+	border:1px solid #299be4;
+	margin-left: 35%;
+}
+.content2 p.button_group input[type="button"]{
+	background:#299be4;
+	color:#fff;
+	margin-left: 20px;
+	display:none;
+}
+.tell_tip2{
+	width:100%;
+	margin-top:10px;
+	text-align: center;
+	overflow:hidden;
+}
+.tell_tip2 span{
+	display:inline-block;
+	background-color:black;
+	opacity:0.6;
+	color:#fff;
+	font-size:18px;
+	line-height:25px;
+}
+

@@ -1,0 +1,244 @@
+<script>
+!function(){
+	laydate.skin('danlan');//切换皮肤，请查看skins下面皮肤库
+//	laydate({elem: '#demo'});//绑定元素
+}();
+	//日期范围限制
+var sampleDate_user = {
+    elem: '#sampleDate_user',
+    format: 'YYYY年MM月DD日',
+    min: laydate.now(), //设定最小日期为当前日期
+    max: '2099-06-16', //最大日期
+    istime: false,
+    istoday: false,
+    choose: function(datas){
+         end.min = datas; //开始日选好后，重置结束日的最小日期
+         end.start = datas //将结束日的初始值设定为开始日
+    	}
+};
+
+
+//laydate(start);
+//laydate(end);
+
+</script>
+<div class="web_information">
+	<div class="web_information_left">
+		<i></i>
+		<span>当前位置:样品中心>用户信息</span>
+	</div>
+	<div class="web_information_right">
+		<i></i>
+		<span id="time"></span>	
+	</div>
+</div>
+<div class="search">
+	<form>
+		<label for="username">
+			<span>被检者姓名 </span>
+			<input type="text" name="sample_name" id="username">	
+		</label>
+		<label for="doctor">
+			<span>顾问医师 </span>
+			<input type="text" name="sample_name" id="doctor">	
+		</label>
+		<label>
+			<span>收样日期 </span>
+			<input placeholder="请输入日期" class="inline laydate-icon" id="sampleDate_user" onClick="laydate({elem: '#sampleDate_user',
+    format: 'YYYY年MM月DD日'})">	
+		</label>
+		<div>
+			<input type="button" name="search" id="search_user" value="查询">
+			<input	type="reset" value="清空" id="reset_search_user"/>
+		</div>
+		
+	</form>
+</div>
+<div class="wrap">
+	<table>
+		<thead>	
+			<tr>
+				<th><input type="checkbox" name="all_select" id="all_select">全选</th>
+				<th>被检者姓名</th>
+				<th>顾问医师</th>
+				<th>医院名称</th>
+				<th>手机</th>
+				<th>是收样日期</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+	<tbody>
+	</tbody>
+</table>
+</div>
+<div class="table_footer">
+	<div class="table_footer_left">
+		<input type="button" name="" id="adduser" value="添加用户信息">
+		<input type="button" name="" id="cutuser" value="删除用户信息">
+		<input type="button" name="" id="enteruser" value="批量导入">
+
+	</div>
+	<div class="table_footer_right">
+		<a href="javascript:void(0)" id="first">首页</a>
+		<a href="javascript:void(0)" id="before">上一页</a>
+		<span>共<i id="pages">50</i>页,当前第<input type="text" name="" id="page_now" value="1">页</span>
+		<span>显示条数<input type="number" name="" value="5" id="page_every" min="1"></span>
+		<a href="javascript:void(0)" id="after">下一页</a>
+		<a href="javascript:void(0)" id="last">尾页</a>
+	</div>
+
+</div>
+<div class="addUserInformation">
+	<form>
+		<div class="content2">
+		<div class="table_group">
+			<p class="userhead"><span>被检测者基础信息</span></p>
+			<div>
+				<label>
+					<span>被检测者姓名</span>
+					<input type="text" name="userInfo" id="usernameT">
+				</label>
+				<label>
+					<span>被检测者年龄</span>
+					<input type="text" name="userInfo" id="userageT">
+				</label>
+				<label>
+					<span>被检者日期</span>
+					<input placeholder="请输入日期" class="inline laydate-icon" id="userDateT" onClick="laydate({elem: '#userDateT',
+	    format: 'YYYY年MM月DD日'})">
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>身高（cm）</span>
+					<input type="text" name="userInfo" id="userheightT">
+				</label>
+				<label>
+					<span>体重（kg）</span>
+					<input type="text" name="userInfo" id="userweightT">
+				</label>
+				<label>
+					<span>家庭电话</span>
+					<input type="text" name="userInfo" id="userphoneT">
+				</label>
+			</div>
+			<div>
+				<label for="adressT">
+					<span>住址</span>
+					<input type="text" name="userInfo" id="adressT">
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>医院名称</span>
+					<input type="text" name="userInfo" id="hospitalT">
+				</label>
+				<label>
+					<span>顾问医师</span>
+					<input type="text" name="userInfo" id="userdoctorT">
+				</label>
+			</div>
+		</div>
+		<div class="table_group">
+			<p class="userhead"><span>被检测者医学信息</span></p>
+			<div>
+				<label>
+					<span>被检测者ID</span>
+					<input type="text" name="userInfo" id="userIDT" readonly="readonly">
+				</label>
+				<label>
+					<span>孕周</span>
+					<input type="text" name="userInfo" id="userGestational_ageT">
+				</label>
+				<label>
+					<span>胎儿类型</span>
+					<select id="fetal_typeT">
+						<option>单胞胎</option>
+						<option>双胞胎</option>		
+					</select>
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>绒毛膜性</span>
+					<select id="ChorionicT">
+						<option>DC</option>
+						<option>MC</option>
+					</select>
+				</label>
+				<label>
+					<span>预产期</span>
+					<input placeholder="请输入日期" class="inline laydate-icon" id="userPre_production_periodT" onClick="laydate({elem: '#userPre_production_periodT',
+	    format: 'YYYY年MM月DD日'})">
+				</label>
+				<label>
+					<span>末次月经日期</span>
+					<input placeholder="请输入日期" class="inline laydate-icon" id="userMenstruationT" onClick="laydate({elem: '#userMenstruationT',
+	    format: 'YYYY年MM月DD日'})">
+					
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>唐氏筛选结果</span>
+					<input type="text" name="userInfo" id="Down_syndromeT">
+				</label>
+				<label>
+					<span>超声波检查</span>
+					<input type="text" name="userInfo" id="ultrasonicT">
+				</label>
+			</div>
+		
+		</div>
+		<div class="table_group Medical_history">
+			<p class="userhead"><span>被检者病况与病史</span></p>
+			<div class="text">
+				<label>
+					<span>现在病史</span>
+					<textarea></textarea>
+				</label>
+			</div>	
+			<div class="text">
+				<label>
+					<span>既往病史</span>
+					<textarea></textarea>
+				</label>
+			</div>	
+			<div class="text">
+				<label>
+					<span>家族病史</span>
+					<textarea></textarea>
+				</label>
+			</div>	
+			<div class="text">
+				<label>
+					<span>过敏史</span>
+					<textarea></textarea>
+				</label>
+			</div>	
+			<div class="text">
+				<label>
+					<span>孕虫及生育史</span>
+					<textarea></textarea>
+				</label>
+			</div>	
+			<div class="text">
+				<label>
+					<span>备注</span>
+					<textarea></textarea>
+				</label>
+			</div>	
+		</div>
+		<p class="button_group">
+			<input type="reset" value="取消添加"  id="reset_userInfo"/>
+			<input type="button" value="添加"  id="add_userInfo"/>
+			<input type="button" value="编辑完成"  id="edit_userInfo"/>		
+		</p>
+		<!--用于存放表单的错误提示 start-->
+		<p class="tell_tip2">
+			<span></span>
+		</p>
+		<!--用于存放表单的错误提示 end-->
+	</div>
+	</form>
+</div>
